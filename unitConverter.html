@@ -85,7 +85,7 @@
             switch (toConvert) {
                 case "cm":
                     if (converted == "cm") {
-                        total = result;
+                        converted = result;
                     } else if (converted == "m") {
                         total = result / 100;
                     } else {
@@ -97,7 +97,7 @@
                     if (converted == "cm") {
                         total = result * 100;
                     } else if (converted == "m") {
-                        total = result;
+                        converted = result;
                     } else {
                         total / 1000;
                     }
