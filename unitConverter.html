@@ -77,30 +77,43 @@
 
     <script>
         function convert() {
-            let initial = document.getElementById("toConvert").value;
-            let final = document.getElementById("converted").value;
-            let result = document.getElementById("converter").value;
-            let converted;
-            result = parseInt(result);
+            let toConvert = document.getElementById("toConvert").value;
+            let converted = document.getElementById("converted").value;
+            let result = parseInt(document.getElementById("converter").value);
+            let total;
 
-            switch (initial) {
+            switch (toConvert) {
                 case "cm":
-                    if (final == "cm") converted = result;
-                    else if (final == "m") converted = result / 100;
-                    else converted = result / 100000;
+                    if (converted == "cm") {
+                        total = result;
+                    } else if (converted == "m") {
+                        total = result / 100;
+                    } else {
+                        total = result / 100000;
+                    }
                     break;
+
                 case "m":
-                    if (final == "cm") converted = result * 100;
-                    else if (final == "m") converted = result;
-                    else converted = result / 1000;
+                    if (converted == "cm") {
+                        total = result * 100;
+                    } else if (converted == "m") {
+                        total = result;
+                    } else {
+                        total / 1000;
+                    }
                     break;
+
                 case "km":
-                    if (final == "cm") converted = result * 100000;
-                    else if (final == "m") converted = result * 1000;
-                    else converted = result;
+                    if (converted == "cm") {
+                        total = converted * 100000;
+                    } else if (converted == "m") {
+                        total = converted * 1000;
+                    } else {
+                        total = result;
+                    }
                     break;
             }
-            document.getElementById("display").innerHTML = result + " " + initial + " to " + final + " is equals to " + converted + " " + final;
+            document.getElementById("display").innerHTML = total + " " + converted;
         }
     </script>
 </body>
