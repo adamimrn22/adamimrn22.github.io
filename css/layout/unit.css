@@ -1,0 +1,86 @@
+body {
+    background-color: var(--bg-color);
+}
+
+.unit {
+    height: 100vh;
+}
+
+.unit-section {
+    margin: 120px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    font-family: 'Roboto', cursive;
+    font-size: 18px;
+    color: var(--white);
+}
+
+input[type=number]{
+    font-family: 'Roboto', sans-serif; ;
+    font-size: 18px;
+    width: 150px;
+    padding: 0px 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    -webkit-appearance: none; /* chrome */
+    -moz-appearance: textfield; /* firefox */
+}
+
+select {
+    background-color: var(--orange);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+#converted {
+    margin: 20px 0px;
+    width: 150px;
+}
+
+.output-section {
+    margin-right: 40px;
+}
+
+button {
+    font-family: 'Roboto', sans-serif; ;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+button:hover {
+    background-color: (--dark-yellow);
+    color: var(--white);
+}
+
+@media (min-width: 700px) {
+    body{overflow-y: hidden;}
+    .unit-section {
+        margin-left: 35%;
+        margin-top: 40px;
+        width: 600px;
+        padding: 60px;
+    }
+    
+    select {margin-left: 20px;}
+    #converter {padding-right: 10px;}
+    #converted {width: 350px;}
+    .input-section {margin: 20px;}
+    .output-section {margin-right: 0px; }
+    label {font-size: 24px;margin-top: 25px;}
+    input[type=number]{ font-size: 24px;
+        width: 250px;padding-right: 25px;} 
+    button { 
+        margin-top: 20px;
+        padding: 10px 0px;
+        width: 350px;
+    }
+    p { font-size: 24px; margin-top: 20px;}
+}

@@ -1,0 +1,50 @@
+body{background-color: var(--bg-color);}
+
+.bmi {
+    height: 100vh;
+}
+
+.bmi-section {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    font-family: 'Roboto', cursive;
+    font-size: 18px;
+    color: var(--white);
+}
+
+.btn-calculate {padding: 10px 0px;}
+
+.btn-calculate button {
+    font-family: 'Roboto', cursive;
+    font-size: 18px;
+    color: var(--black);
+    background-color: var(--yellow-color);
+    width: 200px;
+    border-radius: 25px;
+    padding: 10px 0;
+}
+
+label { padding: 15px}
+input[type=number]{
+    font-family: 'Roboto', sans-serif; ;
+    font-size: 18px;
+    width: 200px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 25px;
+    -webkit-appearance: none; /* chrome */
+    -moz-appearance: textfield; /* firefox */
+}
+
+.display-section { padding: 10px 0px 20px 10px; }
+#display {display: none}
+
+@media (min-width: 700px) {
+    .bmi-section { margin: 5% 35%;}
+    body { overflow-y: hidden;}
+    .display-section { padding-left: 60px; }
+}

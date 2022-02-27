@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator | TOOLS</title>
+    <link rel="stylesheet" href="css/component/navbar.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/component/card.css">
+    <link rel="stylesheet" href="css/layout/tax.css">
+    <script src="https://kit.fontawesome.com/d7e46647e7.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="navbar-flex">
+        <a href="tools.html">
+            <h2 id="title">TOOLS</h2>
+        </a>
+        <a href="infoPage.html" class="flex-btn-tool">
+            <i class="fa-solid fa-house fa-bounce" style="color: var(--black);"></i>
+            <span class="span-name">Back To Home</span>
+        </a>
+    </nav>
+    <header class="tools-title">
+        <h1>TAX <br>CALCULATOR</h1>
+    </header>
+    <section class="tax">
+        <div class="tax-section card">
+            <div class="input-section">
+                <label for="tax">Input tax (RM)</label> <br>
+                <input type="number" id="tax">
+            </div>
+            <button class="btn-calculate" onclick="calculate()">Calculate</button>
+            <div>
+                <p id="display"></p>
+            </div>
+        </div>
+    </section>
+    <div class="navbar-bottom">
+        <div class="navbar-bottom-element">
+            <a href="bmiChecker.html">
+                <img src="/images/svg/bmi.svg" alt="">
+                <p class="font-navbar">BMI CHECKER</p>
+            </a>
+        </div>
+        <div class="navbar-bottom-element">
+            <a href="calculator.html">
+                <img src="/images/svg/calculator.svg" alt="">
+                <p class="font-navbar">CALCULATOR</p>
+            </a>
+        </div>
+        <div class="navbar-bottom-element">
+            <a href="unitConverter.html">
+                <img src="/images/svg/unit.svg" alt="">
+                <p class="font-navbar">UNIT CONVERTER</p>
+            </a>
+        </div>
+        <div class="navbar-bottom-element active">
+            <a href="taxCalculator.html">
+                <img src="/images/svg/tax.svg" alt="">
+                <p class="font-navbar">TAX CALCULATOR</p>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            let income = parseFloat(document.getElementById("tax").value);
+            let tax = income * 0.184
+
+            income *= 0.816
+
+            document.getElementById("display").innerHTML = "Your income is " + income.toFixed(2) + "<br>Your tax amount = " + tax.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

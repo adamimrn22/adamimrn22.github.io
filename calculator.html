@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | TOOLS</title>
+    <link rel="stylesheet" href="css/component/navbar.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/component/card.css">
+    <link rel="stylesheet" href="css/layout/calculator.css">
+    <script src="https://kit.fontawesome.com/d7e46647e7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar-flex">
+        <a href="tools.html">
+            <h2 id="title">TOOLS</h2>
+        </a>
+        <a href="infoPage.html" class="flex-btn-tool">
+            <i class="fa-solid fa-house fa-bounce" style="color: var(--black);"></i>
+            <span class="span-name">Back To Home</span>
+        </a>
+    </nav>
+    <header class="tools-title">
+        <h1>CALCULATOR</h1>
+    </header>
+    <section class="tool-section">
+        <div class="calculator card">
+            <table>
+                <tr>
+                    <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+                    <!-- clearScreen() function clear all the values -->
+                    <td> <input class="button" type="button" value="C" onclick="clearScreen()"
+                            style="background-color: var(--yellow-color);" /> </td>
+                </tr>
+                <tr>
+                    <!-- display() function display the value of clicked button -->
+                    <td> <input class="button" type="button" value="1" onclick="display('1')" /> </td>
+                    <td> <input class="button" type="button" value="2" onclick="display('2')" /> </td>
+                    <td> <input class="button" type="button" value="3" onclick="display('3')" /> </td>
+                    <td> <input class="button" type="button" value="/" onclick="display('/')" /> </td>
+                </tr>
+                <tr>
+                    <td> <input class="button" type="button" value="4" onclick="display('4')" /> </td>
+                    <td> <input class="button" type="button" value="5" onclick="display('5')" /> </td>
+                    <td> <input class="button" type="button" value="6" onclick="display('6')" /> </td>
+                    <td> <input class="button" type="button" value="-" onclick="display('-')" /> </td>
+                </tr>
+                <tr>
+                    <td> <input class="button" type="button" value="7" onclick="display('7')" /> </td>
+                    <td> <input class="button" type="button" value="8" onclick="display('8')" /> </td>
+                    <td> <input class="button" type="button" value="9" onclick="display('9')" /> </td>
+                    <td> <input class="button" type="button" value="+" onclick="display('+')" /> </td>
+                </tr>
+                <tr>
+                    <td> <input class="button" type="button" value="." onclick="display('.')" /> </td>
+                    <td> <input class="button" type="button" value="0" onclick="display('0')" /> </td>
+                    <!-- calculate() function evaluate the mathematical expression -->
+                    <td> <input class="button" type="button" value="=" onclick="calculate()"
+                            style="background-color: var(--yellow-color);" /> </td>
+                    <td> <input class="button" type="button" value="*" onclick="display('*')" /> </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <div class="navbar-bottom">
+        <div class="navbar-bottom-element">
+            <a href="bmiChecker.html">
+                <img src="/images/svg/bmi.svg" alt="bmi">
+                <p class="font-navbar">BMI CHECKER</p>
+            </a>
+        </div>
+        <div class="navbar-bottom-element active">
+            <a href="calculator.html">
+                <img src="/images/svg/calculator.svg" alt="">
+                <p class="font-navbar">CALCULATOR</p>
+            </a>
+        </div>
+        <div class="navbar-bottom-element">
+            <a href="unitConverter.html">
+                <img src="/images/svg/unit.svg" alt="">
+                <p class="font-navbar">UNIT CONVERTER</p>
+            </a>
+        </div>
+        <div class="navbar-bottom-element">
+            <a href="taxCalculator.html">
+                <img src="/images/svg/tax.svg" alt="">
+                <p class="font-navbar">TAX CALCULATOR</p>
+            </a>
+        </div>
+    </div>
+    <script>
+        function clearScreen() {
+            document.getElementById("result").value = "";
+        }
+
+        // This function display values
+        function display(value) {
+            document.getElementById("result").value += value;
+        }
+        // This function evaluates the expression and return result
+        function calculate() {
+            var p = document.getElementById("result").value;
+            var q = eval(p);
+            document.getElementById("result").value = q;
+        }
+    </script>
+</body>
+
+</html>

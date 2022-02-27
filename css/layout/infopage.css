@@ -1,0 +1,238 @@
+.landing {
+    background-image: url('/images/info/background.gif');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+}
+.landing-section{
+    height: 100vh;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.landing-element {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+}
+.arrow {
+    position: absolute;
+    bottom: 20%;
+}
+#arrow-ico:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.landing-element h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+}
+.landing-element p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
+}
+/* About Section */
+#about-section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    align-items: center;
+    background-attachment: fixed;
+    padding: 50px;
+}
+.about-flex {
+    margin: auto 0;
+    display: flex;
+    padding: 0px 30px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--orange);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+#about-section img { max-width: 200px; margin-top: 20px;}
+.about-element { min-height: 450px; margin-top: 20px;}
+.about-element p > a {text-decoration: underline; color: var(--white);}
+.about-element h2 {font-size: 36px; padding-bottom: 10px}
+.about-element h3 {font-size: 24px; padding-bottom: 10px}
+.about-element h4 {font-size: 12px; padding-bottom: 10px}
+.about-element p {font-size: 12px; padding: 20px 0}
+.line-orange { border: 1px solid var(--orange);}
+ 
+/* bio section */
+#bio-section{
+    min-height: 100vh;
+    padding: 10px;
+    display: flex;
+    background-color: var(--orange);
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+}
+.bio-flex {
+    margin: auto 0px;
+    padding: 40px;
+    color: var(--orange);
+    font-family: 'Roboto', sans-serif;
+}
+
+.bio-flex h3 { font-size: 32px;}
+.bio-flex h4 { font-size: 18px;}
+
+#interest-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(/images/hover/bgnebula.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;   
+    padding: 10px 20px;
+}
+
+.interest-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-around;
+    padding: 10px 10px;
+}
+
+.element-interest {
+    color: var(--white);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+}
+
+.element-interest:hover {cursor: pointer;}
+
+#para-int {
+    color: var(--white);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+#interest-title {
+    color: var(--white);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0;
+}
+.border-interest {
+    border: 1px dashed #FBD38D;
+    width: auto;
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 15px;
+}
+
+.hobby-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--orange);
+}
+
+.explore-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(/images/hover/explore.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10px;
+    background-color: var(--bg-color);
+}
+
+.tools-section {
+    color: var(--white);
+    text-align: center;
+    padding: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+}
+
+.tools-section a {
+    color: var(--white);
+    border-radius: var(--border-25);
+    background-color: var(--light-blue);
+    padding: 5px 25px;
+}
+
+.tools-section a:hover{
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+footer {
+    background-color: var(--orange);
+    padding: 10px 0;
+    text-decoration: underline;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    text-shadow: var(--shadow);
+    color: var(--white);
+}
+
+@media (min-width: 700px) {
+    .landing-element > h1 {
+        font-size: 100px;
+    }
+    .landing-element {
+        padding: 20px 50px;
+    }
+    .landing-element > p {
+        font-size: 24px;
+    }
+    /* section name start */
+    .about-flex {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .about-element { margin: 50px 0px 0px 30px;}
+    #about-section img { max-width: 400px;}
+    .about-element { min-height: 400px; margin-bottom: 40px;}
+    .about-element h2 {font-size: 96px;}
+    .about-element h3 {font-size: 48px;}
+    .about-element h4 {font-size: 18px;}
+    .about-element p {font-size: 18px;}
+
+    .bio-flex {
+        padding: 80px;
+        width: 80%;
+    } 
+
+    .tools-section {
+        padding: 60px;
+        font-size: 48px;
+    }
+    
+    #interest-title {
+        font-size: 48px;
+    }
+
+    #para-int {
+        font-size: 24px;
+    }
+
+    .carousel-element {
+        display: block;
+    }
+
+}
