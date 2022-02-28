@@ -29,21 +29,22 @@
         <div class="unit-section card">
             <div class="input-section">
                 <label for="converter">Input Unit</label><br>
-                <input type="number" id="converter">
-                <select id="toConvert">
-                    <option value="cm">cm</option>
-                    <option value="m">m</option>
-                    <option value="km">km</option>
+                <input type="number" id="input" placeholder="Insert Input">
+                <select id="inputType">
+                    <option value="Centimeter">cm</option>
+                    <option value="meter">m</option>
+                    <option value="kilometer">km</option>
                 </select>
             </div>
-            <div class="output-section">
-                <select id="converted">
-                    <option value="cm">Centimeter</option>
-                    <option value="m">Meter</option>
-                    <option value="km">Kilometer</option>
-                </select> <br>
-                <button onclick="convert()">CALCULATE</button>
-                <p id="display"></p>
+            <br>
+            <div class="input-section">
+                <label for="converter">Output Unit</label><br>
+                <input type="number" id="result" placeholder="Result Display">
+                <select id="resultType">
+                    <option value="Centimeter">cm</option>
+                    <option value="meter">m</option>
+                    <option value="kilometer">km</option>
+                </select>
             </div>
         </div>
     </section>
@@ -51,69 +52,90 @@
     <div class="navbar-bottom">
         <div class="navbar-bottom-element">
             <a href="bmiChecker.html">
-                <img src="/images/svg/bmi.svg" alt="">
+                <img src="/images/svg/bmi.svg" alt="" width="32px">
                 <p class="font-navbar">BMI CHECKER</p>
             </a>
         </div>
         <div class="navbar-bottom-element">
             <a href="calculator.html">
-                <img src="/images/svg/calculator.svg" alt="">
+                <img src="/images/svg/calculator.svg" alt="" width="32px">
                 <p class="font-navbar">CALCULATOR</p>
             </a>
         </div>
         <div class="navbar-bottom-element active">
             <a href="unitConverter.html">
-                <img src="/images/svg/unit.svg" alt="">
+                <img src="/images/svg/unit.svg" alt="" width="32px">
                 <p class="font-navbar">UNIT CONVERTER</p>
             </a>
         </div>
         <div class="navbar-bottom-element">
             <a href="taxCalculator.html">
-                <img src="/images/svg/tax.svg" alt="">
+                <img src="/images/svg/tax.svg" alt="" width="32px">
                 <p class="font-navbar">TAX CALCULATOR</p>
             </a>
         </div>
     </div>
 
     <script>
-        function convert() {
-            let toConvert = document.getElementById("toConvert").value;
-            let converted = document.getElementById("converted").value;
-            let result = parseInt(document.getElementById("converter").value);
-            let total;
+        var input = document.getElementById('input');
+        var result = document.getElementById('result');
+        var inputType = document.getElementById('inputType');
+        var resultType = document.getElementById('resultType');
+        var option_from, option_to;
 
-            switch (toConvert) {
-                case "cm":
-                    if (converted == "cm") {
-                        converted = result;
-                    } else if (converted == "m") {
-                        total = result / 100;
-                    } else {
-                        total = result / 100000;
-                    }
-                    break;
+        // now add listener
+        input.addEventListener("keyup", myResult);
+        inputType.addEventListener("change", myResult);
+        resultType.addEventListener("change", myResult);
 
-                case "m":
-                    if (converted == "cm") {
-                        total = result * 100;
-                    } else if (converted == "m") {
-                        converted = result;
-                    } else {
-                        total / 1000;
-                    }
-                    break;
+        // taking initial value
+        option_from = inputType.value;
+        option_to = resultType.value;
 
-                case "km":
-                    if (converted == "cm") {
-                        total = result * 100000;
-                    } else if (converted == "m") {
-                        total = result * 1000;
-                    } else {
-                        converted = result;
-                    }
-                    break;
+
+        function myResult() {
+            // when we change the input and output type vale we need to updata the 
+            // option_from and option_to
+
+            option_from = inputType.value;
+            option_to = resultType.value;
+
+
+            // now compare the input and resultType value and add formula
+            if (option_from === "meter" && option_to === "kilometer") {
+                //this is meter to kilometer formula 
+                result.value = Number(input.value) * 0.001;
+            } else if (option_from === "meter" && option_to === "Centimeter") {
+
+                //this is meter to Centimeter formula 
+                result.value = Number(input.value) * 100;
+
+            } else if (option_from === "meter" && option_to === "meter") {
+                //this is meter to meter formula 
+                result.value = input.value
             }
-            document.getElementById("display").innerHTML = total + " " + converted;
+
+            if (option_from === "kilometer" && option_to === "meter") {
+                //this is kilometer to meter formula 
+                result.value = Number(input.value) * 1000;
+            } else if (option_from === "kilometer" && option_to === "Centimeter") {
+                //this is kilometer to Centimeter formula 
+                result.value = Number(input.value) * 100000;
+            } else if (option_from === "kilometer" && option_to === "kilometer") {
+                //this is kilometer to kilometer formula 
+                result.value = input.value
+            }
+
+            if (option_from === "Centimeter" && option_to === "kilometer") {
+                //this is Centimeter to kilometer formula 
+                result.value = Number(input.value) * 0.00001;
+            } else if (option_from === "Centimeter" && option_to === "meter") {
+                //this is Centimeter to meter formula 
+                result.value = Number(input.value) * 0.01;
+            } else if (option_from === "Centimeter" && option_to === "Centimeter") {
+                //this is Centimeter to Centimeter formula 
+                result.value = input.value
+            }
         }
     </script>
 </body>

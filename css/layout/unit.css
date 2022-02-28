@@ -32,7 +32,8 @@ input[type=number]{
 select {
     background-color: var(--orange);
     color: #ffffff;
-    padding: 8px 16px;
+    padding: 5px 10px;
+    margin-left: 5px;
     border-radius: 5px;
     border: 1px solid transparent;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
@@ -68,19 +69,5 @@ button:hover {
         width: 600px;
         padding: 60px;
     }
-    
-    select {margin-left: 20px;}
-    #converter {padding-right: 10px;}
-    #converted {width: 350px;}
-    .input-section {margin: 20px;}
-    .output-section {margin-right: 0px; }
-    label {font-size: 24px;margin-top: 25px;}
-    input[type=number]{ font-size: 24px;
-        width: 250px;padding-right: 25px;} 
-    button { 
-        margin-top: 20px;
-        padding: 10px 0px;
-        width: 350px;
-    }
-    p { font-size: 24px; margin-top: 20px;}
+    .unit-section p { font-size: 24px; margin-top: 20px;}
 }

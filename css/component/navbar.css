@@ -52,9 +52,9 @@
     justify-content: center;
     align-items: center; 
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
-    z-index: 3;
+    z-index: 13;
     background-color: var(--light-yellow);
 }
 

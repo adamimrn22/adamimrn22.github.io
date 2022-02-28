@@ -39,8 +39,8 @@ button {
     padding: 5px 0px;
 }
 
-p {
-    padding-top: 10px;
+#display {
+    margin-top: 10px;
     font-family: 'Roboto', cursive;
     font-size: 12px;
 }
@@ -61,5 +61,5 @@ p {
         padding: 10px 0px;
         width: 250px;
     }
-    p { font-size: 24px;}
+    #display { font-size: 24px;}
 }
