@@ -168,14 +168,13 @@
 }
 
 .tools-section a {
-    color: var(--white);
+    color: var(--card-color);
     border-radius: var(--border-25);
-    background-color: var(--light-blue);
+    background-color: var(--orange);
     padding: 5px 25px;
 }
 
 .tools-section a:hover{
-    background-color: var(--dark-blue);
     color: var(--white);
 }
 

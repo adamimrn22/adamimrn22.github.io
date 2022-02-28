@@ -21,8 +21,8 @@ body{background-color: var(--bg-color);}
 .btn-calculate button {
     font-family: 'Roboto', cursive;
     font-size: 18px;
-    color: var(--black);
-    background-color: var(--yellow-color);
+    color: var(--white);
+    background-color: var(--orange);
     width: 200px;
     border-radius: 25px;
     padding: 10px 0;

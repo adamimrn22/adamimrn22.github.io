@@ -29,14 +29,14 @@ a { text-decoration: none;}
 button {border: none; background-color: var(--yellow-color); padding: 5px;}
 
 .download-btn {
-    color: var(--black);
-    background-color: var(--light-blue);
+    color: var(--card-color);
+    background-color: var(--orange);
     border-radius: 5px;
     padding: 5px 15px;
 }
 
 .download-btn:hover{
-    background-color: var(--dark-blue);
+    background-color: var(--orange);
     color: var(--white);
 }
 

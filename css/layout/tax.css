@@ -32,7 +32,7 @@ input[type=number]{
  
 button {
     text-transform: uppercase;
-    color: var(--black);
+    color: var(--white);
     background-color: var(--orange);
     width: 150px;
     border-radius: var(--border-15);
@@ -54,7 +54,7 @@ button {
     }
 
     label {font-size: 24px;margin-top: 25px;}
-    input[type=number]{ font-size: 24px;
+    input[type=number]{ font-size: 18px;
         width: 250px;} 
     button { 
         margin-top: 20px;
