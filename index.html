@@ -14,133 +14,132 @@
     <script src="https://kit.fontawesome.com/d7e46647e7.js" crossorigin="anonymous"></script>
 </head>
 
+
 <body>
+    <header class="landing">
+        <nav class="navbar-flex">
+            <h2 id="title">adam imran</h2>
+            <a href="tools.html" class="flex-btn-tool">
+                <i class="fa-solid fa-compact-disc fa-spin" style="color: var(--black);"></i>
+                <span class=" span-name">Tools</span>
+            </a>
+        </nav>
+        <div class="landing-section">
+            <div class="landing-element">
+                <h1>welcome</h1>
+                <p>hello, my name is adam imran</p>
+            </div>
+            <div class="arrow">
+                <a href="#about-section"><i class="fa-solid fa-angle-down fa-3x fa-bounce" id="arrow-ico"
+                        style="color: #fff;"></i></a>
+            </div>
+        </div>
+    </header>
+    <section id="about-section">
+        <div class="about-flex card">
+            <img src="images/info/me.jpg" alt="Adam Imran">
+            <div class="about-element">
+                <h2>Hello There!</h2>
+                <h3>Adam Imran</h3>
+                <h4>(Student | FullStack Developer | UI / UX Designer )</h4>
+                <hr class="line-orange">
+                <p>My name is Adam Imran bin Alwi, Born in Ampang, Selangor. Currently Based in Kuala Lumpur,
+                    Malaysia.
+                    I'm
+                    a Diploma Student studying at UTM SPACE.
+                    <br> <a href="cv.html">Click here to view my cv</a>
+                </p>
+                <hr class="line-orange"> <br>
+                <div>Or Click below to download my cv</div> <br>
+                <a href="/ADAM IMRAN CV.pdf" class="download-btn" download>DOWNLOAD MY CV</a>
+                <br>
+            </div>
+        </div>
+    </section>
+    <section id="bio-section">
+        <div class="bio-flex card">
+            <div class="bio-element">
+                <h3>Bio</h3><br>
+                <hr class="line-orange"><br>
+                <h3>Matric</h3>
+                <h4>A20DW0653</h4><br>
+                <hr class="line-orange"><br>
+                <h3>Section</h3>
+                <h4>39</h4><br>
+                <hr class="line-orange"><br>
+                <h3>Program</h3>
+                <h4>DDWD2703 Web Programming</h4><br>
+                <hr class="line-orange"><br>
+            </div>
+        </div>
+    </section>
+    <section id="interest-section">
+        <div class="card">
+            <h3 id="interest-title">My Interest</h3>
+            <p id="para-int">Click below to change an image background</p>
+            <div class="interest-flex">
+                <div class="border-interest">
+                    <span class="element-interest" onclick="changeBgDragon()">Dragon Art</span>
+                </div>
+                <div class="border-interest">
+                    <span class="element-interest" onclick="changeBgPixelArt()">Pixel Art</span>
+                </div>
+                <div class="border-interest">
+                    <span class="element-interest" onclick="changeBgAst()">Astronomy</span>
+                </div>
+                <div class="border-interest">
+                    <span class="element-interest" onclick="changeBgNature()">Nature</span>
+                </div>
+                <div class="border-interest">
+                    <span class="element-interest" onclick="changeBgAurora()">Aurora</span>
+                </div>
+                <div class="border-interest">
+                    <span class="element-interest" onclick="changeBgAnime()">Anime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hobby-section">
+        <!--Hobbies Carousel-->
+        <div class="card">
+            <div class="carousel">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <div class="mySlides fade">
+                    <div class="text" style="font-size: 24px;">My Hobbies</div>
+                    <img src="/images/vector/watching ufc.svg" style="width:135px; height:135px;">
+                    <div class="text">Watching Ufc</div>
+                </div>
 
-    <body>
-        <header class="landing">
-            <nav class="navbar-flex">
-                <h2 id="title">adam imran</h2>
-                <a href="tools.html" class="flex-btn-tool">
-                    <i class="fa-solid fa-compact-disc fa-spin" style="color: var(--black);"></i>
-                    <span class=" span-name">Tools</span>
-                </a>
-            </nav>
-            <div class="landing-section">
-                <div class="landing-element">
-                    <h1>welcome</h1>
-                    <p>hello, my name is adam imran</p>
+                <div class="mySlides fade">
+                    <div class="text" style="font-size: 24px;">My Hobbies</div>
+                    <img src="/images/vector/listening music.svg" style="width:135px; height:135px;">
+                    <div class="text">Listening to Music</div>
                 </div>
-                <div class="arrow">
-                    <a href="#about-section"><i class="fa-solid fa-angle-down fa-3x fa-bounce" id="arrow-ico"
-                            style="color: #fff;"></i></a>
-                </div>
-            </div>
-        </header>
-        <section id="about-section">
-            <div class="about-flex card">
-                <img src="images/info/me.jpg" alt="Adam Imran">
-                <div class="about-element">
-                    <h2>Hello There!</h2>
-                    <h3>Adam Imran</h3>
-                    <h4>(Student | FullStack Developer | UI / UX Designer )</h4>
-                    <hr class="line-orange">
-                    <p>My name is Adam Imran bin Alwi, Born in Ampang, Selangor. Currently Based in Kuala Lumpur,
-                        Malaysia.
-                        I'm
-                        a Diploma Student studying at UTM SPACE.
-                        <br> <a href="cv.html">Click here to view my cv</a>
-                    </p>
-                    <hr class="line-orange"> <br>
-                    <div>Or Click below to download my cv</div> <br>
-                    <a href="/ADAM IMRAN CV.pdf" class="download-btn" download>DOWNLOAD MY CV</a>
-                    <br>
-                </div>
-            </div>
-        </section>
-        <section id="bio-section">
-            <div class="bio-flex card">
-                <div class="bio-element">
-                    <h3>Bio</h3><br>
-                    <hr class="line-orange"><br>
-                    <h3>Matric</h3>
-                    <h4>A20DW0653</h4><br>
-                    <hr class="line-orange"><br>
-                    <h3>Section</h3>
-                    <h4>39</h4><br>
-                    <hr class="line-orange"><br>
-                    <h3>Program</h3>
-                    <h4>DDWD2703 Web Programming</h4><br>
-                    <hr class="line-orange"><br>
-                </div>
-            </div>
-        </section>
-        <section id="interest-section">
-            <div class="card">
-                <h3 id="interest-title">My Interest</h3>
-                <p id="para-int">Click below to change an image background</p>
-                <div class="interest-flex">
-                    <div class="border-interest">
-                        <span class="element-interest" onclick="changeBgDragon()">Dragon Art</span>
-                    </div>
-                    <div class="border-interest">
-                        <span class="element-interest" onclick="changeBgPixelArt()">Pixel Art</span>
-                    </div>
-                    <div class="border-interest">
-                        <span class="element-interest" onclick="changeBgAst()">Astronomy</span>
-                    </div>
-                    <div class="border-interest">
-                        <span class="element-interest" onclick="changeBgNature()">Nature</span>
-                    </div>
-                    <div class="border-interest">
-                        <span class="element-interest" onclick="changeBgAurora()">Aurora</span>
-                    </div>
-                    <div class="border-interest">
-                        <span class="element-interest" onclick="changeBgAnime()">Anime</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="hobby-section">
-            <!--Hobbies Carousel-->
-            <div class="card">
-                <div class="carousel">
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <div class="mySlides fade">
-                        <div class="text" style="font-size: 24px;">My Hobbies</div>
-                        <img src="/images/vector/watching ufc.svg" style="width:135px; height:135px;">
-                        <div class="text">Watching Ufc</div>
-                    </div>
 
-                    <div class="mySlides fade">
-                        <div class="text" style="font-size: 24px;">My Hobbies</div>
-                        <img src="/images/vector/listening music.svg" style="width:135px; height:135px;">
-                        <div class="text">Listening to Music</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="text" style="font-size: 24px;">My Hobbies</div>
-                        <img src="/images/vector/game.svg" style="width:135px; height:135px;">
-                        <div class="text">Playing Games</div>
-                    </div>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="mySlides fade">
+                    <div class="text" style="font-size: 24px;">My Hobbies</div>
+                    <img src="/images/vector/game.svg" style="width:135px; height:135px;">
+                    <div class="text">Playing Games</div>
                 </div>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-        </section>
-        <section class="explore-section">
-            <div class="card">
-                <div class="tools-section">
-                    <h3>Explore Tool</h3>
-                    <p>Here are 4 tools that I've created</p>
-                    <br>
-                    <a href="tools.html" class="btn-explore">EXPLORE</a>
-                </div>
+        </div>
+    </section>
+    <section class="explore-section">
+        <div class="card">
+            <div class="tools-section">
+                <h3>Explore Tool</h3>
+                <p>Here are 4 tools that I've created</p>
+                <br>
+                <a href="tools.html" class="btn-explore">EXPLORE</a>
             </div>
-        </section>
-        <footer>
-            <div>Copyright &copy; Adam Imran 2022</div>
-        </footer>
-        <script src="js/carousel.js"></script>
-        <script src="js/interest.js"></script>
-    </body>
+        </div>
+    </section>
+    <footer>
+        <div>Copyright &copy; Adam Imran 2022</div>
+    </footer>
+    <script src="js/carousel.js"></script>
+    <script src="js/interest.js"></script>
+</body>
 
 </html>
