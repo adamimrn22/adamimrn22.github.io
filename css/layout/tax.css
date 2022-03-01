@@ -46,7 +46,6 @@ button {
 }
 
 @media (min-width: 700px) {
-    body{overflow-y: hidden;}
     .tax-section {
         margin-left: 35%;
         width: 600px;

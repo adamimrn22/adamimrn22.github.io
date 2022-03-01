@@ -45,6 +45,5 @@ input[type=number]{
 
 @media (min-width: 700px) {
     .bmi-section { margin: 5% 35%;}
-    body { overflow-y: hidden;}
     .display-section { padding-left: 60px; }
 }
